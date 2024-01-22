@@ -1,0 +1,37 @@
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: lighter;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+}
+.title {
+  font-size: 64px;
+  text-align: center;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: inherit;
+  font-weight: lighter;
+}
+
+.table {
+  position: relative;
+  display: flex;
+  width: auto;
+  height: auto;
+  align-content: center;
+  justify-content: center;
+  align-content: center;
+}
+.categoryButton {
+  position: absolute;
+  width: 224px;
+  height: 32px;
+  font-size: 24px;
+  text-align: center;
+  font-family: sans-serif;
+  font-weight: lighter;
+  text-align: center;
+  border-color: white;
+}

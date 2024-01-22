@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TechTable</title>
+    <link href="style.css" rel="stylesheet" />
+
+    <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+  </head>
+  <body>
+    <header>
+      <div>Periodic Table of Elements</div>
+      <!--<del>元素周期表 <span>水素</span></del>-->
+    </header>
+
+    <main>
+      <div class="table" id="table">
+        <div class="category">
+          <!--element categories-->
+          <button class="btn">Alkalai Metals</button>
+          <button class="btn">Alkali Earth Metals</button>
+          <button class="btn">Transition metals</button>
+          <button class="btn">Post-transition metals</button>
+          <button class="btn">Metaloids</button>
+          <button class="btn">Nonmetals</button>
+          <button class="btn">Halogen</button>
+          <button class="btn">Noble gases</button>
+        </div>
+
+        <!--form
+          Adding element's comments
+          <input
+            type="text"
+            placeholder="Share the information for the element"
+          />
+          <select>
+            choosing elements
+            <option value="H">Hydrogen</option>
+            <option value="He">Helium</option>
+          </select>
+          <button onclick="cute()">Post</button>
+        form-->
+        <section class="gensos">
+          <!--the table-->
+
+          <button id="cute" class="cute" onclick="cute()">
+            Florent is a cute girl.
+          </button>
+        </section>
+      </div>
+    </main>
+  </body>
+  <script src="cute.js"></script>
+  <script src="genso.js"></script>
+  <script src="display.js"></script>
+</html>

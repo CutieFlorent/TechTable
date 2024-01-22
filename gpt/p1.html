@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Periodic Table</title>
+    <style>
+      .element {
+        position: absolute;
+        border: 1px solid #000;
+        padding: 5px;
+        background-color: #fff;
+        font-size: 14px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="periodic-table"></div>
+
+    <script>
+      // 创建元素周期表中元素符号的数组
+      const elements = [
+        "H",
+        "He",
+        "Li",
+        "Be",
+        "B",
+        "C",
+        "N",
+        "O",
+        "F",
+        "Ne",
+        "Na",
+        "Mg",
+        "Al",
+        "Si",
+        "P",
+        "S",
+        "Cl",
+        "Ar",
+        "K",
+        "Ca",
+        // 其他元素...
+      ];
+
+      // 获取容器元素
+      const periodicTable = document.getElementById("periodic-table");
+
+      // 添加每个元素到元素周期表中的相应位置
+      elements.forEach((symbol, index) => {
+        const element = document.createElement("div");
+        element.textContent = symbol;
+        element.classList.add("element");
+
+        // 计算元素在周期表中的位置
+        const row = Math.floor(index / 18) + 1; // 每行18个元素
+        const column = (index % 18) + 1;
+
+        // 设置每个元素的位置
+        element.style.top = `${row * 50}px`; // 假设每个元素高度为50px
+        element.style.left = `${column * 50}px`; // 假设每个元素宽度为50px
+
+        // 将元素添加到容器中
+        periodicTable.appendChild(element);
+      });
+    </script>
+  </body>
+</html>

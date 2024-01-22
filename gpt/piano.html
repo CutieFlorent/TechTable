@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Web Piano</title>
+    <style>
+      .key {
+        display: inline-block;
+        width: 50px;
+        height: 200px;
+        border: 1px solid #000;
+        margin: 5px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="piano">
+      <div class="key" id="F4">F</div>
+      <div class="key" id="C4">C</div>
+      <div class="key" id="G4">G</div>
+      <div class="key" id="D4">D</div>
+      <div class="key" id="A4">A</div>
+      <div class="key" id="E4">E</div>
+      <div class="key" id="B4">B</div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/tone"></script>
+    <script>
+      // 创建 Tone.js  Transport（时间控制器）
+      Tone.Transport.start();
+
+      // 创建一个简单的声音示例
+      const synth = new Tone.Synth().toDestination();
+
+      // 钢琴按键点击事件处理
+      const keys = document.querySelectorAll(".key");
+      keys.forEach((key) => {
+        key.addEventListener("mouseenter", () => {
+          playSound(key.id);
+        });
+      });
+
+      // 播放声音的函数
+      function playSound(note) {
+        synth.triggerAttackRelease(note, "2n");
+      }
+    </script>
+  </body>
+</html>
